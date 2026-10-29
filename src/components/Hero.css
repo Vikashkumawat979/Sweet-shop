@@ -1,0 +1,174 @@
+
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+  width: 100%;
+  min-height: 650px;
+  padding: 50px 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-image: url("/images/sweets-banner.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content {
+  width: 38%;
+  text-align: right;
+  /* color: #fffdf7; */
+  color: #94752f;
+  padding: 0 15px;
+}
+
+.hero-content h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.hero-content h1 span {
+  display: block;
+}
+
+.hero-content h1,
+.hero-content p {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.hero-content p {
+  /* max-width: 480px; */
+  width: 100%;
+  max-width: none;
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: right;
+}
+
+.hero-btn {
+  display: inline-block;
+  min-width: 165px;
+  padding: 12px 25px;
+  /* border: 1px solid #fffdf7; */
+  border: 1px solid #94752f;;
+  border-radius: 3px;
+  background: transparent;
+  /* color: #fffdf7; */
+  color: #94752f;;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+  margin-right: 0;
+}
+
+.hero-btn:hover {
+  background: #fffdf7;
+  border: 1px solid #fffdf7;
+  color: #96732e;
+}
+
+/* ===== TABLET RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .hero-section {
+    min-height: 380px;
+    padding: 35px 4%;
+  }
+
+  .hero-content {
+    width: 48%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(30px, 4.5vw, 42px);
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 230px;
+    padding: 25px 15px;
+    background-position: 43% center;
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* background: linear-gradient(
+      90deg,
+      rgba(80, 49, 12, 0.08),
+      rgba(80, 49, 12, 0.65) */
+    /* ); */
+  }
+
+  .hero-content {
+    position: relative;
+    width: 58%;
+    margin-left: auto;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(25px, 6vw, 34px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 380px) {
+  .hero-section {
+    min-height: 300px;
+    padding: 20px 10px;
+  }
+
+  .hero-content {
+    width: 60%;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 11px;
+  }
+
+  .hero-btn {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}

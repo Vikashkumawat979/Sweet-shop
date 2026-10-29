@@ -1,0 +1,158 @@
+
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+  width: 100%;
+  padding: 55px 6%;
+  background: #fffdf7;
+  color: #28231b;
+  background:
+   linear-gradient(
+      rgba(255, 229, 164, 0.2),
+      rgba(255, 229, 164, 0.2)
+    );
+}
+
+/* ===== CONTENT ROW ===== */
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 75px;
+}
+
+.about-row:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== TEXT ===== */
+
+.about-text {
+  width: 100%;
+}
+
+.about-label {
+  display: block;
+  margin-bottom: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  color: #5c4b2c;
+}
+
+.about-text h2 {
+  margin-bottom: 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 2.5vw, 34px);
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.about-text p {
+  margin: 0;
+  color: #5d574e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ===== IMAGES ===== */
+
+.about-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 45px 5%;
+  }
+
+  .about-row {
+    gap: 30px;
+    margin-bottom: 55px;
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 30px 18px;
+  }
+
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 42px;
+  }
+
+  .about-row.reverse .about-image {
+    order: 2;
+  }
+
+  .about-row.reverse .about-text {
+    order: 1;
+  }
+
+  .about-image {
+    height: 230px;
+  }
+
+  .about-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 27px;
+    margin-bottom: 12px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 380px) {
+  .about-section {
+    padding: 25px 14px;
+  }
+
+  .about-image {
+    height: 200px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+}

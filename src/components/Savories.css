@@ -1,0 +1,211 @@
+
+/* SAVORIES SECTION */
+.savories-section {
+  padding: 30px 4%;
+  background: #fffdf7;
+  color: #282219;
+  background:
+   linear-gradient(
+      rgba(255, 229, 164, 0.2),
+      rgba(255, 229, 164, 0.2)
+    );
+}
+
+/* HEADING */
+.savories-title {
+  text-align: center;
+  font: 400 clamp(30px, 3vw, 42px) Georgia, serif;
+  margin-bottom: 30px;
+}
+
+.savories-title span {
+  color: #b39145;
+  font-size: 24px;
+}
+
+/* GRID */
+.savories-products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px 18px;
+}
+
+/* CARD — MATCH SWEETS */
+.savories-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #eee5d5;
+  border-radius: 12px;
+  background: #fffefa;
+  box-shadow: 0 4px 14px rgba(85, 62, 26, 0.04);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.savories-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(85, 62, 26, 0.1);
+}
+
+/* IMAGE — SAME SIZE */
+.savories-image {
+  display: block;
+  width: 100%;
+  /* aspect-ratio: 1 / 1; */
+  height: 250px;
+  object-fit: cover;
+  background: #f5f0e7;
+}
+
+/* CONTENT SPACING */
+.savories-card h3,
+.savories-price,
+.savories-controls,
+.savories-add-btn {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.savories-card h3 {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font: 400 clamp(17px, 1.6vw, 23px) Georgia, serif;
+  line-height: 1.3;
+}
+
+.savories-price {
+  margin-top: 7px;
+  margin-bottom: 12px;
+  color: #ad8130;
+  font-size: 20px;
+}
+
+.savories-price span {
+  font-size: 13px;
+  color: #766b59;
+}
+
+/* WEIGHT + QUANTITY */
+.savories-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.savories-controls select {
+  min-width: 0;
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #d9c8a9;
+  border-radius: 6px;
+  background: #fffefa;
+  color: #30291f;
+  outline: none;
+  font-size: 16px;
+  font-size: 14px;
+}
+
+.savories-quantity {
+  display: flex;
+  height: 38px;
+  border: 1px solid #d9c8a9;
+  border-radius: 6px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.savories-quantity button {
+  width: 30px;
+  height: 100%;
+  border: 0;
+  background: #fffefa;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.savories-quantity span {
+  min-width: 28px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ADD TO CART */
+.savories-add-btn {
+  width: calc(100% - 30px);
+  min-height: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border: 0;
+  border-radius: 5px;
+  background: #b9974d;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.savories-add-btn:hover {
+  background: #94712f;
+}
+.savories-add-btn i{
+  padding-right: 10px;
+}
+
+/* CART */
+.savories-cart-summary {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #75664e;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .savories-products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .savories-section {
+    padding: 28px 14px;
+  }
+
+  .savories-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 10px;
+  }
+
+  .savories-card h3 {
+    font-size: 17px;
+  }
+
+  .savories-price {
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .savories-controls {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .savories-controls select {
+    height: 38px;
+  }
+
+  .savories-quantity {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .savories-quantity button {
+    width: 38px;
+  }
+
+  .savories-add-btn {
+    min-height: 36px;
+    font-size: 12px;
+  }
+}
